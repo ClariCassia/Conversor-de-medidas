@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="src/reset.css">
+    <link rel="stylesheet" href="src/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:opsz,wght@9..40,500&display=swap" rel="stylesheet">
+    <title>Conversor de medidas</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h1>Conversor de medidas</h1>
+
+        <div class="grupo-inputs">
+            <label for="valor-entrada">Digite a quantidade:</label>
+            <input type="number" id="valor-entrada">
+            <span>*campo obrigatório</span>
+        </div>
+
+        <div class="grupo-inputs">
+            <label for="unidade-original">De:</label>
+            <select name="unidade-original" id="unidade-original">
+                <option value="unidade-original">Selecione a unidade atual</option>
+                <option value="Metro(s)">Metro(s)</option>
+                <option value="Quilomêtro(s)">Quilomêtro(s)</option>
+                <option value="Centimetro(s)">Centimetro(s)</option>
+                <option value="Milimetro(s)">Milimetro(s)</option>
+            </select>
+            <span class="unidade">*campo obrigatório</span>
+        </div>
+
+        <div class="grupo-inputs">
+            <label for="unidade-original">Para:</label>
+            <select name="unidade-desejada" id="unidade-desejada">
+                <option value="">Selecione a unidade que deseja</option>
+                <option value="Metro(s)">Metro(s)</option>
+                <option value="Quilomêtro(s)">Quilomêtro(s)</option>
+                <option value="Centimetro(s)">Centimetro(s)</option>
+                <option value="Milimetro(s)">Milimetro(s)</option>
+            </select>
+            <span class="unidade">*campo obrigatório</span>
+        </div>
+
+        <div class="botao"><button class="btn-converter"> Converter</button></div>
+        <div id="mensagem-resultado"></div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>
