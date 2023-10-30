@@ -79,7 +79,7 @@ const exibeResultado = (valorEntrada, unidadeEntrada, resultado, unidadeSaida) =
 }
 
 btnConverter.addEventListener('click', () => {
-    
+
     const valorEntrada = document.querySelector('#valor-entrada').value
     const unidadeEntrada = document.querySelector('#unidade-original').value
     const unidadeSaida = document.querySelector('#unidade-desejada').value
