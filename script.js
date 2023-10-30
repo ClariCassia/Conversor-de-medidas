@@ -3,7 +3,8 @@ const mensagemErro = document.querySelectorAll('span')
 const unidades = document.querySelectorAll('.unidade')
 const campos = document.querySelectorAll('input, select')
 const inputs = document.querySelectorAll('select')
-const mensa = document.getElementById('mensagem-resultado')
+const mensagemResultado = document.getElementById('mensagem-resultado')
+
 
 function converterMedidas(unidadeEntrada, unidadeSaida, valorEntrada) {
 
@@ -45,6 +46,7 @@ function converterMedidas(unidadeEntrada, unidadeSaida, valorEntrada) {
 }
 
 const verificaInputs = () => {
+
     let camposPreenchidos = true
     campos.forEach((item, index) => {
         if (item.value === '' || item.value === 'unidade-original') {
@@ -59,6 +61,7 @@ const verificaInputs = () => {
 }
 
 const verificaUnidadesIguais = (unidadeEntrada, unidadeSaida) => {
+
     let camposDiferentes = true
     unidades.forEach((item) => {
         if (unidadeEntrada === unidadeSaida) {
@@ -71,11 +74,11 @@ const verificaUnidadesIguais = (unidadeEntrada, unidadeSaida) => {
     return camposDiferentes
 }
 
-const exibeResultado = (valorEntrada, unidadeEntrada, resultado, unidadeSaida) => {
-    const mensagemResultado = document.getElementById('mensagem-resultado')
-    mensagemResultado.classList.add('mensagem-resultado')
+const exibeResultado = (valorEntrada, unidadeEntrada, resultado, unidadeSaida) => {    
 
+    mensagemResultado.classList.add('mensagem-resultado')
     mensagemResultado.innerHTML = `${valorEntrada} ${unidadeEntrada} equivalem a ${resultado.toLocaleString('pt-BR')} ${unidadeSaida} `
+    
 }
 
 btnConverter.addEventListener('click', () => {
