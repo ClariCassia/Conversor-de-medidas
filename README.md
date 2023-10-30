@@ -10,7 +10,7 @@
 
 ## Sobre o projeto 🚀
 
-Esta aplicação web foi criada para possibilitar aos usuários a conversão de diversas unidades de medida, tais como metros, quilômetros, centímetros e muitas outras. A interface da aplicação é amigável e intuitiva, permitindo que o usuário insira o valor que deseja converter. Após isso, basta selecionar a unidade de medida de origem e a unidade de destino a partir de práticas listas suspensas. A conversão desejada é exibida de forma instantânea. Ao clicar para enviar o valor para conversão, se caso algum campo não estiver preenchido,uma mensagem de "campo obrigatório" aparece embaixo do campo que não foi preenchido. Caso os campos para selecionar as unidades forem inguais uma mensagem aparecerá para que o usuário escolha uma unidade de medida válida.
+Esta aplicação web foi criada para possibilitar aos usuários a conversão de diversas unidades de medida, tais como metros, quilômetros, centímetros e muitas outras. A interface da aplicação é amigável e intuitiva, permitindo que o usuário insira o valor que deseja converter. Após isso, basta selecionar a unidade de medida de origem e a unidade de destino a partir de práticas listas suspensas. A conversão desejada é exibida de forma instantânea. Ao clicar para enviar o valor para conversão, se caso algum campo não estiver preenchido,uma mensagem de "campo obrigatório" aparece embaixo do campo que não foi preenchido. Caso os campos para selecionar as unidades forem iguais uma mensagem aparecerá para que o usuário escolha uma unidade de medida válida.
 
 <br>
 
