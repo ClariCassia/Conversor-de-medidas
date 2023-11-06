@@ -1,10 +1,9 @@
 const btnConverter = document.querySelector('.btn-converter')
 const mensagemErro = document.querySelectorAll('span')
 const unidades = document.querySelectorAll('.unidade')
-const campos = document.querySelectorAll('input, select')
+const campos = [...document.querySelectorAll('input, select')]
 const inputs = document.querySelectorAll('select')
 const mensagemResultado = document.getElementById('mensagem-resultado')
-
 
 function converterMedidas(unidadeEntrada, unidadeSaida, valorEntrada) {
 
@@ -45,19 +44,15 @@ function converterMedidas(unidadeEntrada, unidadeSaida, valorEntrada) {
     exibeResultado(valorEntrada, unidadeEntrada, resultado, unidadeSaida)
 }
 
-const verificaInputs = () => {
+function verificaInputs() {
 
-    let camposPreenchidos = true
+    let camposPreenchidos = campos.every(item => item.value !== '' && item.value !== 'unidade-original');
+
     campos.forEach((item, index) => {
-        if (item.value === '' || item.value === 'unidade-original') {
-            mensagemErro[index].classList.add('mensagem-erro-visivel')
-            camposPreenchidos = false
-        } else {
-            mensagemErro[index].classList.remove('mensagem-erro-visivel')
-        }
-    })
+        mensagemErro[index].classList.toggle('mensagem-erro-visivel', !camposPreenchidos);
+    });
 
-    return camposPreenchidos
+    return camposPreenchidos;
 }
 
 const verificaUnidadesIguais = (unidadeEntrada, unidadeSaida) => {
@@ -74,11 +69,11 @@ const verificaUnidadesIguais = (unidadeEntrada, unidadeSaida) => {
     return camposDiferentes
 }
 
-const exibeResultado = (valorEntrada, unidadeEntrada, resultado, unidadeSaida) => {    
+const exibeResultado = (valorEntrada, unidadeEntrada, resultado, unidadeSaida) => {
 
     mensagemResultado.classList.add('mensagem-resultado')
     mensagemResultado.innerHTML = `${valorEntrada} ${unidadeEntrada} equivalem a ${resultado.toLocaleString('pt-BR')} ${unidadeSaida} `
-    
+
 }
 
 btnConverter.addEventListener('click', () => {
@@ -89,7 +84,6 @@ btnConverter.addEventListener('click', () => {
 
     let converter = verificaInputs() && verificaUnidadesIguais(unidadeEntrada, unidadeSaida) ? true : false
 
-    if (converter) {
-        converterMedidas(unidadeEntrada, unidadeSaida, valorEntrada)
-    }
+    converter ? converterMedidas(unidadeEntrada, unidadeSaida, valorEntrada) : null;
+
 })
